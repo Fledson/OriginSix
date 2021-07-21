@@ -28,3 +28,42 @@ window.addEventListener('scroll', () => {
         header.classList.remove('scroll')
     }
 })
+
+// TESTIMUNIALS CAROUSEL SLIDER SWIPER
+const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    pagination: {
+        el: '.swiper-pagination'
+    },
+    mousewhell: true,
+    keyboard: true
+        // effect: 'cube',
+        // grabCursor: true,
+        // cubeEffect: {
+        //     shadow: true,
+        //     slideShadows: true,
+        //     shadowOffset: 20,
+        //     shadowScale: 0.94
+        // },
+        // pagination: {
+        //     el: '.swiper-pagination'
+        // }
+})
+
+// SCROLLREVEAL -> MOSTRAR ELEMENTOS QUANDO DER SCROLL NA PAGINA
+const scrollReveal = ScrollReveal({
+    origin: 'top',
+    distance: '30px',
+    duration: 700,
+    reset: true
+})
+
+scrollReveal.reveal(
+    `
+    #home .image, #home .text,
+    #about .image, #about .text,
+    #services header, #services .card,
+    #testimonials header, #testimonials .testimonials,
+    #contact .text, #contact .links
+`, { interval: 100 }
+)

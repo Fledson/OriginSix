@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OriginSix</title>
 
-    <!-- STYLES -->
-    <link rel="stylesheet" href="style.css" />
-
     <!-- ICONS -->
     <link rel="stylesheet" href="./assets/fonts/style.css" />
+
+    <!-- SWIPER JS <-> Para passar os testimonials -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="style.css" />
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,6 +23,7 @@
 
 <body>
     <div class="container-master">
+        <!-- ============= NAV BAR ============= -->
         <header id="header" class="">
             <nav class="container">
                 <a class="logo" href="#">beauty<span>salon</span>.</a>
@@ -38,7 +42,9 @@
             </nav>
         </header>
 
+        <!-- ============= CONTEUDO DA PAGINA ============= -->
         <main>
+            <!-- ============= HOME ============= -->
             <section id="home" class="section">
                 <div class="container grid">
                     <div class="image">
@@ -56,6 +62,7 @@
 
             <div class="divider-1"></div>
 
+            <!-- ============= ABOUT ============= -->
             <section class="section" id="about">
                 <div class="container grid">
                     <div class="image">
@@ -80,6 +87,7 @@
 
             <div class="divider-2"></div>
 
+            <!-- ============= SERVICES ============= -->
             <section class="section" id="services">
                 <div class="container grid">
                     <header>
@@ -114,11 +122,99 @@
                     </div>
                 </div>
             </section>
-        </main>
-        <footer></footer>
+
+            <div class="divider-1"></div>
+
+            <!-- ============= TESTIMONIAL ============= -->
+            <section class="section" id="testimonials">
+                <div class="container">
+                    <header>
+                        <h2 class="title">Depoimentos de quem já passou por aqui</h2>
+                    </header>
+                    <div class="testimonials swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="testimonials swiper-slide">
+                                <blockquote>
+                                    <p>
+                                        <span>&ldquo;</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, nemo assumenda fugiat beatae ea magni quo, praesentium
+                                    </p>
+                                    <cite>
+                      <img
+                        src="assets/fotos/wanessa-sousa.jpg"
+                        alt="Foto de Wanessa Sousa"
+                      />
+                      Wanessa Sousa
+                    </cite>
+                                </blockquote>
+                            </div>
+
+                            <div class="testimonials swiper-slide">
+                                <blockquote>
+                                    <p>
+                                        <span>&ldquo;</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, nemo assumenda fugiat beatae ea magni quo, praesentium
+                                    </p>
+                                    <cite>
+                      <img
+                        src="assets/fotos/diego-diniz.jpg"
+                        alt="Foto de Diego Diniz"
+                      />
+                      Diego Diniz
+                    </cite>
+                                </blockquote>
+                            </div>
+
+                            <div class="testimonials swiper-slide">
+                                <blockquote>
+                                    <p>
+                                        <span>&ldquo;</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, nemo assumenda fugiat beatae ea magni quo, praesentium
+                                    </p>
+                                    <cite>
+                      <img
+                        src="assets/fotos/fernanda-santos.jpg"
+                        alt="Foto de Fernanda Santos"
+                      />
+                      Fernanda Santos
+                    </cite>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="divider-2"></div>
+            <!-- ============= CONTACT ============= -->
+            <section class="section" id="contact">
+                <div class="container grid">
+                    <div class="text">
+                        <h2 class="title">Entre em contato com a gente!</h2>
+                        <p>
+                            Entre em contato com a Beautysalon, queremos tirar suas dúvidas, ouvir suas críticas e sugestões.
+                        </p>
+                        <a href="https://api.whatsapp.com/send?phone=+5511998456754&text=Olá! Gostaria de agendar um horario!" target="_blank" class="button"><i class="icon-whatsapp"></i>Entrar em contato</a
+              >
+            </div>
+            <div class="links">
+              <ul class="grid">
+                <li><i class="icon-phone"></i>11 99845-6754</li>
+                <li><i class="icon-map-pin"></i>R. Amauri Souza, 346</li>
+                <li><i class="icon-mail"></i>contato@beautysalon.com</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer></footer>
     </div>
 
-    <script src="main.js"></script>
-</body>
+    <!-- SWIPER JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+    <!-- SCROLLREVEAL -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="main.js "></script>
+  </body>
 </html>
