@@ -29,6 +29,16 @@ window.addEventListener('scroll', () => {
     }
 })
 
+const toTop = document.querySelector('.back-to-top')
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY >= navHeight) {
+        toTop.classList.add('show')
+    } else {
+        toTop.classList.remove('show')
+    }
+})
+
 // TESTIMUNIALS CAROUSEL SLIDER SWIPER
 const swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
@@ -63,7 +73,7 @@ scrollReveal.reveal(
     #home .image, #home .text,
     #about .image, #about .text,
     #services header, #services .card,
-    #testimonials header, #testimonials .testimonials,
+    #testimonials header, #testimonials,
     #contact .text, #contact .links
-`, { interval: 100 }
+`, { interval: 90 }
 )

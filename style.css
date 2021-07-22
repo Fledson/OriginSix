@@ -131,6 +131,10 @@
     .logo span {
         color: var(--base-color)
     }
+    
+    .logo-alt span {
+        color: var(--body-color)
+    }
     /*  ======================== NAVIGATION ========================  */
     
     nav {
@@ -421,4 +425,57 @@
     #contact ul li {
         display: flex;
         align-items: center;
+    }
+    /*  ======================== FOOTER ========================  */
+    
+    footer {
+        background: var(--base-color);
+    }
+    
+    footer .logo {
+        display: inline-block;
+        margin-bottom: 1.5rem;
+    }
+    
+    footer .brand p {
+        color: var(--text-color-light);
+        margin-bottom: 0.75rem;
+    }
+    
+    footer .container.grid .social {
+        /* margin-bottom: 4rem; */
+    }
+    
+    footer i {
+        color: var(--text-color-light);
+        font-size: 1.5rem;
+    }
+    
+    footer .social a {
+        margin-right: 2rem;
+    }
+    /*  ======================== ARROW UP ========================  */
+    
+    .back-to-top {
+        /* cores */
+        background: var(--base-color-alt);
+        color: var(--text-color-light);
+        /* posição */
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        /* estilo - tamanho  */
+        padding: .5rem;
+        clip-path: circle();
+        font-size: 1.5rem;
+        line-height: 0;
+        /* visibilidade na pagina */
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.5s;
+    }
+    
+    .back-to-top.show {
+        visibility: visible;
+        opacity: 1;
     }
