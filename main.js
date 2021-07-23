@@ -1,7 +1,6 @@
 // ABRIR E FECHAR MENU AO CLICAR NO ÍCONE
 const nav = document.querySelector('#header nav')
 const toggle = document.querySelectorAll('nav .toggle')
-
 for (const element of toggle) {
     element.addEventListener('click', () => {
         nav.classList.toggle('show')
@@ -10,7 +9,6 @@ for (const element of toggle) {
 
 // ESCONDER MENU AO CLICAR EM UM ITEM DA LISTA
 const links = document.querySelectorAll('nav ul li a')
-
 for (const link of links) {
     link.addEventListener('click', () => {
         nav.classList.remove('show')
@@ -18,25 +16,32 @@ for (const link of links) {
 }
 
 // ADICIONAR SHADOWS NO HEADER AO ROLAR PAGINA AO DAR SCROLL
-const header = document.querySelector('#header')
-const navHeight = header.offsetHeight
+function changeHeaderWhenScroll() {
+    const header = document.querySelector('#header')
+    const navHeight = header.offsetHeight
 
-window.addEventListener('scroll', () => {
     if (window.scrollY >= navHeight) {
         header.classList.add('scroll')
     } else {
         header.classList.remove('scroll')
     }
-})
+}
 
-const toTop = document.querySelector('.back-to-top')
+// BUTTOM BACK TO TOP
+function backToTop() {
+    const toTop = document.querySelector('.back-to-top')
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY >= navHeight) {
+    if (window.scrollY >= 560) {
         toTop.classList.add('show')
     } else {
         toTop.classList.remove('show')
     }
+}
+
+// WHEN SCROLL
+window.addEventListener('scroll', () => {
+    changeHeaderWhenScroll()
+    backToTop()
 })
 
 // TESTIMUNIALS CAROUSEL SLIDER SWIPER
@@ -74,6 +79,7 @@ scrollReveal.reveal(
     #about .image, #about .text,
     #services header, #services .card,
     #testimonials header, #testimonials,
-    #contact .text, #contact .links
+    #contact .text, #contact .links,
+    footer .brand, footer .social
 `, { interval: 90 }
 )
